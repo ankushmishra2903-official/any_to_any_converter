@@ -131,4 +131,3 @@ enum FormatDate {
   /// example : 23:30:23
   time24WithSec,
 }
-

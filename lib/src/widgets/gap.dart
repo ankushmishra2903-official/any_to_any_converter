@@ -50,7 +50,6 @@ class HorizontalGap extends StatelessWidget {
 
   const HorizontalGap({Key? key, this.gap = 8}) : super(key: key);
 
-
   @override
   Widget build(BuildContext context) {
     return SizedBox(

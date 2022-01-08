@@ -109,4 +109,3 @@ extension TextExtension on Text {
     );
   }
 }
-

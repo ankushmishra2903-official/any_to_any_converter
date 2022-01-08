@@ -9,13 +9,13 @@ class Underline extends StatelessWidget {
 
   const Underline(
       {Key? key,
-        required this.height,
-        required this.width,
-        required this.color,
-        required this.isCenter,
-        this.isDouble = false,
-        required this.text,
-        required this.gap})
+      required this.height,
+      required this.width,
+      required this.color,
+      required this.isCenter,
+      this.isDouble = false,
+      required this.text,
+      required this.gap})
       : super(key: key);
 
   @override
@@ -29,23 +29,23 @@ class Underline extends StatelessWidget {
         final Widget widget = isCenter ? Center(child: text) : text;
         final Widget underLine = width == 0.1
             ? Container(
-          height: height,
-          width: boxWidth,
-          color: color,
-        )
+                height: height,
+                width: boxWidth,
+                color: color,
+              )
             : Flex(
-          children: List.generate(dashCount, (_) {
-            return SizedBox(
-              width: dashWidth,
-              height: dashHeight,
-              child: DecoratedBox(
-                decoration: BoxDecoration(color: color),
-              ),
-            );
-          }),
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          direction: Axis.horizontal,
-        );
+                children: List.generate(dashCount, (_) {
+                  return SizedBox(
+                    width: dashWidth,
+                    height: dashHeight,
+                    child: DecoratedBox(
+                      decoration: BoxDecoration(color: color),
+                    ),
+                  );
+                }),
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                direction: Axis.horizontal,
+              );
         return Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
